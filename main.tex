@@ -1,0 +1,388 @@
+% Latex template: https://github.com/mqTeXUsers/Macquarie-University-Beamer-Theme
+
+% Slide Masters:
+
+% Title
+% Text
+% 2 column
+% Full-image
+% Bibliography
+% Closing
+ 
+\documentclass[aspectratio=169, 12pt]{beamer} % Aspect ratio
+% https://tex.stackexchange.com/a/14339/5483 
+% Possible values: 1610, 169, 149, 54, 43 and 32.
+% 169 = 16:9
+
+\PassOptionsToPackage{table}{xcolor}    %https://tex.stackexchange.com/a/5365/5483
+
+\usetheme{macquarie}
+\usepackage{multicol} % https://tex.stackexchange.com/a/396018/5483
+
+\usepackage[english]{babel}       % Set language
+% \usepackage[utf8x]{inputenc}      % Set encoding
+\usepackage{colortbl}
+\mode<presentation>           % Set options
+{
+  \usetheme{default}          % Set theme
+  \usecolortheme{default}         % Set colors
+  \usefonttheme{default}          % Set font theme
+  \setbeamertemplate{caption}[numbered] % Set caption to be numbered
+}
+
+% Uncomment this to have the outline at the beginning of each section highlighted.
+%\AtBeginSection[]
+%{
+%  \begin{frame}{Outline}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+\usepackage{graphicx}         % For including figures
+\usepackage{booktabs}         % For table rules
+\usepackage{hyperref}         % For cross-referencing
+
+
+\usepackage{enumitem} % https://tex.stackexchange.com/a/2292/5483
+
+%https://tex.stackexchange.com/a/371844/5483
+\setbeamerfont{bibliography entry author}{size=\tiny}
+\setbeamerfont{bibliography entry title}{size=\tiny}
+\setbeamerfont{bibliography entry location}{size=\tiny}
+\setbeamerfont{bibliography entry note}{size=\tiny}
+\setbeamerfont{bibliography item}{size=\tiny}
+
+%https://tex.stackexchange.com/q/333587/5483
+%TODO SHAWN REPLACE OSF URL
+%\setbeamertemplate{footline}{\strut~\texttt{https://osf.io/v5jp7/}\hfill\insertframen%umber~/~\inserttotalframenumber\strut~~~}
+
+\title{Research transparency and Data Management} % Presentation title
+\author{Shawn A Ross}               % Presentation author
+\institute{Office of the Deputy Vice-Chancellor (Research)}         % Author affiliation
+\date{\today}                 % Today's date  
+\begin{document}
+
+% Title page
+% This page includes the informations defined earlier including title, author/s, affiliation/s and the date
+% \begin{frame}[noframenumbering]
+
+\maketitle
+
+  
+% \end{frame}
+
+% Outline
+% This page includes the outline (Table of content) of the presentation. All sections and subsections will appear in the outline by default.
+\begin{frame}{Strategies for field data capture infrastructure}
+  \tableofcontents
+\end{frame}
+
+% The following is the most frequently used slide types in beamer
+% The slide structure is as follows:
+%
+%\begin{frame}{<slide-title>}
+% <content>
+%\end{frame}
+
+% Slides to speak to at CAA2019
+
+\section{CAA2019 short presentation}
+
+\begin{frame}{Perceptions of the reproducibility crisis}
+  \begin{figure}[H]
+    \centering
+        \includegraphics[height=.7\textheight]{figures/reproducibility-graphic-online1.jpeg}
+        \caption{Is there a reproducibility crisis? \cite{Baker2016-cf}}
+        \label{fig:figure1a}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Level 2 TOP Guidelines for authors (excerpt)}
+  
+    \begin{enumerate}[label=\arabic*.]
+        \setcounter{enumi}{1}
+        % This increments the enumerate counter by 1.
+        
+        \item Authors using original data must:
+        \begin{enumerate}[label=\alph*.]
+
+            \item make the data available at a trusted digital repository [...]
+            \item include all variables, treatment conditions, and observations described in the manuscript.
+            \item provide a full account of the procedures used to collect, preprocess, clean, or generate the data.
+            \item provide program code, scripts, codebooks, and other documentation sufficient to precisely reproduce all published results.
+            \item provide research materials and description of procedures necessary to conduct an independent replication of the research.
+        \end{enumerate}
+    \end{enumerate}
+    \cite{Osf2014-pf}
+\end{frame}
+
+\begin{frame}{Scalable approaches to data and analysis}
+  \begin{figure}[H]
+    \centering
+        \includegraphics[height=.7\textheight]{figures/Ocean-Health-Index.jpg}
+        \caption{Better science in less time, illustrated by the Ocean Health Index project. \cite{Stewart_Lowndes2017-lj}}
+        \label{fig:figure2a}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{`Small data' research}
+ \begin{figure}[H]
+    \centering
+        \includegraphics[height=.75\textheight]{figures/Archaeologists-standards.png}
+        \caption{Archaeologists contemplate data standards (FAIMS Stocktaking, 2012)}
+        \label{fig:figure4a}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{The data lifecycle}
+ \begin{figure}[H]
+    \centering
+        \includegraphics[height=.75\textheight]{figures/research-data-life-diagram.png}
+        \caption{\cite{Jisc2018-gx} Image CC-BY-ND}
+        \label{fig:figure5a}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{FAIMS Mobile software}
+ \begin{figure}[H]
+    \centering
+        \includegraphics[height=.75\textheight]{figures/FAIMS-screenshots.png}
+        \caption{FAIMS Mobile: GIS and `picture dictionaries'}
+        \label{fig:figure8a}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Field data capture infrastructure: key messages}
+    \begin{itemize}[label=\textbullet]
+        \item We deserve research-specific software.
+        \item Diverse practices and limited resources require generalised software.
+        \item Do one thing well with modular and federated software (but slice the pie thoughtfully).
+        \item Open-source software has advantages (but is difficult to sustain). 
+        \item Scope requirements carefully.
+        \item Invest in outreach and engagement.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Generalised}
+ \begin{figure}[H]
+    \centering
+        \includegraphics[height=.75\textheight]{figures/FAIMS-generalised.png}
+        \caption{FAIMS Mobile customisations on GitHub}
+        \label{fig:figure11a}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Modular and federated}
+ \begin{figure}[H]
+    \centering
+        \includegraphics[height=.75\textheight]{figures/FAIMS-federated.png}
+        \caption{FAIMS Mobile federation}
+        \label{fig:figure13a}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Challenges and paths forward}
+  How do we get from where we are now to where we want to be?
+      \begin{itemize}[label=\textbullet]
+        \item Understand the evolving expectations of transparent research. 
+        \item Look past desktop software (Excel, ARCGIS, Filemaker, Access, etc.).
+        \item Rally around emerging research- and domain-specific solutions (even if imperfect).
+        \item Overcome `not invented here'; you don't need a bespoke solution.
+        \item Budget for `ground-up' transparency (data and code). Up-front costs will be high but offer longer-term payoffs (in costs, time, and quality).
+        \item Implement (and budget for) fundamental good practice in data and code management before other technologies.
+        \item Improve research design (prioritise approach over methods) \cite{Muthukrishna2019-kt, Hole1973-cy}
+    \end{itemize}
+\end{frame}
+
+% In-depth information for reference
+\section{Transparency and reproducibility}
+
+\begin{frame}{The `reproducibility crisis'}
+  For nearly a decade the reproducibility crisis has featured in the scientific literature \cite{Jasny2011-bw, Baker2016-cf, Munafo2017-bj}. Low reproducibility rates have emerged from large-scale studies:
+    \begin{itemize}[label=\textbullet]
+        \item Results from only 39\% of psychology studies could be reproduced \cite{Open_Science_Collaboration2015-vf}.
+        \item Even lower reproducibility rate in biomedical research \cite{Begley2012-xt,Prinz2011-za}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Perceptions of the reproducibility crisis}
+  \begin{figure}[H]
+    \centering
+        \includegraphics[height=.7\textheight]{figures/reproducibility-graphic-online1.jpeg}
+        \caption{Is there a reproducibility crisis? \cite{Baker2016-cf}}
+        \label{fig:figure3}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{The response: improved rigour and transparency}
+  Key guidelines to good practice:
+    \begin{itemize}[label=\textbullet]
+        \item Findable, Accessible, Interoperable, and Reusable (FAIR) data \cite{Wilkinson2016-mr, Go-fair2017-vs}.
+        \item Transparency and Openness Promotion (TOP) guidelines \cite{Nosek2015-wm}.
+        \item Data transparency toolkit \cite{Perkel2018-rw}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{The response: from guidelines to mandates}
+  Recent mandates for transparency or reproducibility:
+    \begin{itemize}[label=\textbullet]
+        \item Nature: Transparency Upgrade \cite{Nature2017-lq}.
+        \item Nature: FAIR data in Earth science \cite{Nature2019-ng}.
+        \item Copernicus: FAIR data in atmospheric sciences \cite{Van_Edig2018-bu}.
+        \item Not just the natural sciences: AJPS requires data and code \cite{Jacoby2017-lw, Ajps2015-ex}.
+        \item TOP Guidelines have 5000 signatories, including publishers representing 1000 journals \cite{Cos2019-mr}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{TOP Guidelines: publisher adoption}
+  \begin{figure}[H]
+    \centering
+        \includegraphics[height=.7\textheight]{figures/TOP-landscape.png}
+        \caption{The Landscape of Open Data Policies \cite{Mellor2018-bf}}
+        \label{fig:figure2}
+  \end{figure}
+\end{frame}
+
+% https://tex.stackexchange.com/a/2292/5483
+% https://ctan.org/pkg/enumitem?lang=en
+
+\begin{frame}{Level 2 TOP Guidelines for authors (excerpt)}
+  
+    \begin{enumerate}[label=\arabic*.]
+        \setcounter{enumi}{1}
+        % This increments the enumerate counter by 1.
+        
+        \item Authors using original data must:
+        \begin{enumerate}[label=\alph*.]
+
+            \item make the data available at a trusted digital repository [...]
+            \item include all variables, treatment conditions, and observations described in the manuscript.
+            \item provide a full account of the procedures used to collect, preprocess, clean, or generate the data.
+            \item provide program code, scripts, codebooks, and other documentation sufficient to precisely reproduce all published results.
+            \item provide research materials and description of procedures necessary to conduct an independent replication of the research.
+        \end{enumerate}
+    \end{enumerate}
+    \cite{Osf2014-pf}
+\end{frame}
+
+\begin{frame}{What does this mean? Are we ready?}
+  Emerging good practice - and publisher and funder policies - mean:
+    \begin{itemize}[label=\textbullet]
+        \item Comprehensive, FAIR datasets will be deposited in domain-specific repositories. Data, and especially metadata, quality will be higher.
+        \item Data will be captured digitally as early in research as possible, and provenance / version history maintained.
+        \item Research approach, processes, and procedures will be documented.
+        \item Data processing and analysis will use code (not Excel or ARCGIS!) 
+        \item Code will be documented and published for reuse.
+        \item Further steps taken for analytical reproducibility (use of OSS, version control, automation, containerisation, etc.). 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Beyond compliance: large-scale research}
+    The same approaches that facilitate transparency and reproducibility support the kind of scalable and synthetic research that can address archaeological `grand challenges'. \cite{Kintigh2014-ub}
+        \begin{itemize}[label=\textbullet]
+            \item Paper data capture and manual digitisation and cleaning don't scale.
+            \item Email and desktop software don't scale.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Scalable approaches to data and analysis}
+  \begin{figure}[H]
+    \centering
+        \includegraphics[height=.7\textheight]{figures/Ocean-Health-Index.jpg}
+        \caption{Better science in less time, illustrated by the Ocean Health Index project. \cite{Stewart_Lowndes2017-lj}}
+        \label{fig:figure14}
+  \end{figure}
+\end{frame}
+
+\section{`Small data' infrastructure across the data lifecycle}
+
+\begin{frame}{`Small data' research}
+ \begin{figure}[H]
+    \centering
+        \includegraphics[height=.75\textheight]{figures/Archaeologists-standards.png}
+        \caption{Archaeologists contemplate data standards (FAIMS Stocktaking, 2012)}
+        \label{fig:figure7}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Context: the challenge of `small data'}
+    `Long tail' research: most field data is small data \cite{Borgman2015-rh}
+    \begin{itemize}[label=\textbullet]
+        \item Smaller scale; smaller communities; local control.
+        \item Diverse questions, approaches, and methods.
+        \item Heterogeneous data; variety of content, structure.
+        \item Data and infrastructure emerge from fieldwork. 
+        \item Relative lack of standards.
+        \item Limited infrastructure and funding.
+        \item Challenges associated with big(ger) data from photogrammetry, SfM, video, geophysics, etc., will exacerbate these problems.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{The data lifecycle}
+ \begin{figure}[H]
+    \centering
+        \includegraphics[height=.75\textheight]{figures/research-data-life-diagram.png}
+        \caption{\cite{Jisc2018-gx} Image CC-BY-ND}
+        \label{fig:figure9}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Infrastructure across the data lifecycle}
+    Consider the infrastructure needed to manage the three main phases of the data lifecycle
+    \begin{itemize}[label=\textbullet]
+        \item Publication (most mature): domain-specific repositories.
+        \item Processing and analysis (less mature): project-level code \cite{Stewart_Lowndes2017-lj}, then Virtual Labs / Science Gateways, like \cite{Alveo2019-tk} in language analysis.
+        \item Capture (least mature): most varied, needs to work offline under difficult conditions. Commercial solutions insufficient \cite{Bureau_of_Reclamation2017-xl}.
+    \end{itemize}
+\end{frame}
+
+
+\section{From current practice to better practice}
+
+\begin{frame}{Challenges and paths forward}
+  How do we get from where we are now to where we want to be?
+      \begin{itemize}[label=\textbullet]
+        \item Understand the evolving expectations of transparent research. 
+        \item Look past desktop software (Excel, ARCGIS, Filemaker, Access, etc.).
+        \item Rally around emerging research- and domain-specific solutions (even if imperfect).
+        \item Overcome `not invented here'; you don't need a bespoke solution.
+        \item Budget for `ground-up' transparency (data and code). Up-front costs will be high but offer longer-term payoffs (in costs, time, and quality).
+        \item Implement (and budget for) fundamental good practice in data and code management before other technologies.
+        \item Improve research design (prioritise approach over methods) \cite{Muthukrishna2019-kt, Hole1973-cy}
+    \end{itemize}
+\end{frame}
+% \bibliographystyle{apalike}
+
+% Adding the option 'allowframebreaks' allows the contents of the slide to be expanded in more than one slide.
+% The "1" comes from the outer theme"
+
+\section{References}
+
+\begin{multicols}{2}[]
+\bibliography{references}
+\bibliographystyle{apalike}
+\end{multicols}
+
+
+% \begin{frame}[allowframebreaks]{References}
+  
+%   \bibliography{references}
+%   \bibliographystyle{apalike}
+% \end{frame}
+
+
+\begin{frame}{Thank you!}
+
+This presentation is available at:
+\texttt{https://osf.io/v5jp7/}
+
+Source code for this presentation is available at: \texttt{https://github.com/saross/CAA-Ross-FAIMS}.
+
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+
+\end{frame}
+
+
+
+\end{document}

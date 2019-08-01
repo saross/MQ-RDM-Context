@@ -1,4 +1,4 @@
-A presentation delivered on 27 May 2019 to the ADRs and ADHDRs at Macquarie University to provide context for the release of a draft version of the research data governance documents and text for a RDM planning process.
+An evolving presentation proving context for the new data governance standards at Macquarie University. Also delivered in other venues. 
 
 LaTeX template:
 

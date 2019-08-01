@@ -1,5 +1,7 @@
 An evolving presentation proving context for the new data governance standards at Macquarie University. Also delivered in other venues. 
 
+See 'releases' for PDFs of presentations.
+
 LaTeX template:
 
 A Beamer Theme for Macquarie University

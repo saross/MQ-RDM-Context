@@ -56,14 +56,16 @@
 %TODO SHAWN REPLACE OSF URL
 %\setbeamertemplate{footline}{\strut~\texttt{https://osf.io/v5jp7/}\hfill\insertframen%umber~/~\inserttotalframenumber\strut~~~}
 
+\usepackage{comment} % for commenting out multiple lines; uses \begin{comment} ... \end{comment}
+
 \title{`Trust but verify': Transparency \& compliance} % Presentation title
 \author{A/Prof Shawn A Ross, Director of Data Science and eResearch}               % Presentation author
 \institute{Office of the Deputy Vice-Chancellor (Research)}         % Author affiliation
-\date{Tuesday 10 September 2019}                 % Today's date  
+\date{Monday 28 October 2019}                 % Today's date  
 \begin{document}
 
 % Title page
-% This page includes the informations defined earlier including title, author/s, affiliation/s and the date
+% This page includes the information defined earlier including title, author/s, affiliation/s and the date
 % \begin{frame}[noframenumbering]
 
 %Abstract: Since the recognition of the 'reproducibility crisis' a decade ago, research technologies have been proposes as part of the solution. What began as recommendations or guides to best practice have evolved into publisher and funder mandates, and have influenced codes of ethical practice. The Findable, Accessible, Interoperable, and Reusable (FAIR) data principles and the Transparency and Openness Promotion (TOP) guidelines have been among the most influential. Both have been endorsed by funders and publishers, and are poised to change research practice beyond the early adopters already implementing them. To void marginalisation - the inability to publish in quality outlets or compete for major grants - researchers from across disciplines are facing significant change to daily practice, requiring much more technical literacy and computational thinking ability than most now possess. The transformation of research requires retraining of mid-career and senior researchers, but will likely depend upon training younger researchers, even in disciplines where such training is not customary.
@@ -195,22 +197,27 @@
   \end{figure}
 \end{frame}
 
+\begin{frame}{EU research governance policy}
+  With the Horizon 2020 program \cite{European_Commission2019-an} Europe made 'research data open by default':
+    \begin{itemize}[label=\textbullet]
+        \item `Participating projects will be required to develop a \textbf{Data Management Plan} (DMP), in which they will specify \textbf{what data will be open}: detailing \textbf{what data the project will generate}, whether and how it will be \textbf{exploited or made accessible for verification and re-use}, and how it will be \textbf{curated and preserved}.'
+        \item Opt-outs: 'as open as possible, as closed as necessary'.
+        \item Associated costs can be claimed in grant.
+        \item Continuing investment, e.g., FAIRsFAIR project \cite{Knaw-dans2019-sv} to implement FAIR across repositories.
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{Not just the natural sciences}
   Changes are coming to HASS disciplines:
     \begin{itemize}[label=\textbullet]
         \item American Journal of Political Science requires (and tests) data and code \cite{Jacoby2017-lw, Ajps2015-ex}.
         \item All European Academies (allea) E-Humanities working group \cite{Allea2019-wy} has issued an Open Consultation on `Sustainable and FAIR Data Sharing in the Humanities' \cite{Allea2019-aw}.
+        \item Allea seeks to address the imperatives of the `Open Science agenda' across Humanities and Social Sciences, and `facilitate the adoption of Open Science across the Humanities'.
         \item Research Data Alliance (RDA) has an 'Ambassador for the Humanities' and is examining how RDA standards and outputs can apply to humanities disciplines \cite{Rda2019-wc}.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{EU research governance policy}
-  With the Horizon 2020 program \cite{European_Commission2019-an} Europe made 'research data open by default':
-    \begin{itemize}[label=\textbullet]
-        \item Opt-outs: 'as open as possible, as closed as necessary'.
-        \item Continuing investment, e.g., FAIRsFAIR project \cite{Knaw-dans2019-sv} to implement FAIR across repositories.
-    \end{itemize}
-\end{frame}
+\begin{comment}
 
 \begin{frame}{Australia: Data sharing in the NHMRC Statement}
     The NHMRC `strongly encourages' data sharing in the National Statement on Ethical Conduct in Human Research and their Open Access Policy. \cite{Nhmrc2018-sj, Nhmrc2018-vn} \par
@@ -241,6 +248,8 @@
         \item EU General Data Protection Regulation \cite{Gdpr2019-ee}
     \end{itemize}
 \end{frame}
+
+\end{comment}
 
 \section{Beyond compliance}
 
@@ -294,7 +303,7 @@
 % This presentation is available at:
 % \texttt{https://osf.io/...}
 
-Source code for this presentation is available at: \texttt{https://github.com/saross/Research-Transparency/releases/tag/v1.6}
+Source code for this presentation is available at: \texttt{https://github.com/saross/Research-Transparency/releases/tag/v1.7}
 
 This work is licensed under a Creative Commons Attribution 4.0 International License.
 
